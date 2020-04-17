@@ -1,6 +1,7 @@
 package app;
 
 import java.util.*;
+import java.io.*;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -8,6 +9,13 @@ public class App {
         int statusMethod;
         HashMap<String, Integer> firstStatus = new HashMap<String, Integer>();
         HashMap<String, Integer> secondStatus = new HashMap<String, Integer>();
+        String[] fume = readCSV("只人出自.csv");
+        String[] dwarf = readCSV("鉱人出自.csv");
+        String[] elf = readCSV("森人出自.csv");
+        String[] lizard = readCSV("蜥蜴人出自");
+        String[] layer = readCSV("圃人出自.csv");
+        String[] history = readCSV("来歴.csv");
+        String[] encounter = readCSV("邂逅.csv");
 
         firstStatus.put("体力点", 0);
         firstStatus.put("魂魄点", 0);
@@ -17,7 +25,7 @@ public class App {
         secondStatus.put("持久度", 0);
         secondStatus.put("反射度", 0);
 
-        status stat = new status(race, firstStatus, secondStatus);
+        status stat = new status(race, firstStatus, secondStatus, fume, dwarf, elf, lizard, layer, history, encounter);
 
         inputRace: while (true) {
             System.out.println("種族を選択してください。\n1:只人\n2:鉱人\n3:森人\n4:蜥蜴人\n5:圃人");
@@ -79,5 +87,29 @@ public class App {
                 continue decisionStatus;
             }
         }
+
+    }
+
+    public static String[] readCSV(String fileName) {
+        FileInputStream fi = null;
+        InputStreamReader is = null;
+        BufferedReader br = null;
+        try {
+            String path = System.getProperty("user.dir");
+            System.out.println(path);
+            fi = new FileInputStream(fileName);
+            is = new InputStreamReader(fi, "Shift-JIS");
+            br = new BufferedReader(is);
+
+            String line = br.readLine();// 読み込み行
+
+            String[] list = line.split(",");
+            br.close();
+            return list;
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        }
+        return null;
     }
 }

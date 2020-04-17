@@ -6,11 +6,26 @@ public class status {
     private int race;
     private HashMap<String, Integer> firstStatus = new HashMap<String, Integer>();
     private HashMap<String, Integer> secondStatus = new HashMap<String, Integer>();
+    String[] fume;
+    String[] dwarf;
+    String[] elf;
+    String[] lizard;
+    String[] layer;
+    String[] history;
+    String[] encounter;
 
-    status(int race, HashMap<String, Integer> firstStatus, HashMap<String, Integer> secondStatus) {
+    status(int race, HashMap<String, Integer> firstStatus, HashMap<String, Integer> secondStatus, String[] fume,
+            String[] dwarf, String[] elf, String[] lizard, String[] layer, String[] history, String[] encounter) {
         this.race = race;
         this.firstStatus = firstStatus;
         this.secondStatus = secondStatus;
+        this.fume = fume;
+        this.dwarf = dwarf;
+        this.elf = elf;
+        this.lizard = lizard;
+        this.layer = layer;
+        this.history = history;
+        this.encounter = encounter;
     }
 
     public HashMap<String, Integer> getFirstStatus() {
