@@ -12,7 +12,7 @@ public class App {
         String[] fume = readCSV("只人出自.csv");
         String[] dwarf = readCSV("鉱人出自.csv");
         String[] elf = readCSV("森人出自.csv");
-        String[] lizard = readCSV("蜥蜴人出自");
+        String[] lizard = readCSV("蜥蜴人出自.csv");
         String[] layer = readCSV("圃人出自.csv");
         String[] history = readCSV("来歴.csv");
         String[] encounter = readCSV("邂逅.csv");
@@ -87,7 +87,25 @@ public class App {
                 continue decisionStatus;
             }
         }
-
+        stat.career();
+        stat.printCareer();
+        statusBonus: while (true) {
+            Scanner scan = new Scanner(System.in);
+            try {
+                System.out.println("\n好きな第一能力値に+1できます。");
+                System.out.println("1:体力点\n2:魂魄点\n3:技量点\n4:知力点");
+                if (stat.bonusStatus(scan.nextInt())) {
+                    break statusBonus;
+                } else {
+                    continue statusBonus;
+                }
+            } catch (Exception e) {
+                System.out.println("入力された値が違います。");
+                e.printStackTrace();
+                continue statusBonus;
+            }
+        }
+        stat.printStatus();
     }
 
     public static String[] readCSV(String fileName) {
@@ -95,8 +113,6 @@ public class App {
         InputStreamReader is = null;
         BufferedReader br = null;
         try {
-            String path = System.getProperty("user.dir");
-            System.out.println(path);
             fi = new FileInputStream(fileName);
             is = new InputStreamReader(fi, "Shift-JIS");
             br = new BufferedReader(is);
