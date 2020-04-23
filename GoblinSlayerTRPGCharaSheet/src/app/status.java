@@ -19,6 +19,10 @@ public class status {
     private String origin;
     private String historyDeci;
     private String encounterDeci;
+    private ArrayList<Integer> stateValue = new ArrayList<Integer>();
+    private int vitality;
+    private int mobility;
+    private int spellUsageCount;
 
     status(int race, HashMap<String, Integer> firstStatus, HashMap<String, Integer> secondStatus, String[] fume,
             String[] dwarf, String[] elf, String[] lizard, String[] layer, String[] history, String[] encounter) {
@@ -40,6 +44,10 @@ public class status {
 
     public HashMap<String, Integer> getSecondStatus() {
         return secondStatus;
+    }
+
+    public ArrayList<Integer> getStateValue() {
+        return stateValue;
     }
 
     public void setRace(int race) {
@@ -448,10 +456,59 @@ public class status {
         }
     }
 
+    public void stateDice() {
+        Random rand = new Random();
+        for (int i = 0; i < 3; i++) {
+            stateValue.add(rand.nextInt(6) + 1 + rand.nextInt(6) + 1);
+        }
+    }
+
+    public void stateFixed() {
+        stateValue.add(5);
+        stateValue.add(7);
+        stateValue.add(9);
+    }
+
+    public void decisionVitality(int vitalityDice) {
+        vitality = firstStatus.get("体力点") + firstStatus.get("魂魄点") + secondStatus.get("持久度") + vitalityDice;
+    }
+
+    public void decisionMobility(int mobilityDice) {
+        switch (race) {
+            case 1:
+            case 5:
+                mobility = mobilityDice * 3;
+                break;
+            case 2:
+            case 4:
+                mobility = mobilityDice * 2;
+                break;
+            case 3:
+                mobility = mobilityDice * 4;
+                break;
+        }
+    }
+
+    public void decisionSpellUsageCount(int spellUsageDice) {
+        if (spellUsageDice <= 6) {
+            spellUsageCount = 0;
+        } else if (spellUsageDice <= 9) {
+            spellUsageCount = 1;
+        } else if (spellUsageDice <= 11) {
+            spellUsageCount = 2;
+        } else {
+            spellUsageCount = 3;
+        }
+    }
+
     public void printStatus() {
         System.out.println("第一能力値\n体力点:" + firstStatus.get("体力点") + "\n魂魄点:" + firstStatus.get("魂魄点") + "\n技量点:"
                 + firstStatus.get("技量点") + "\n知力点:" + firstStatus.get("知力点") + "\n第二能力値\n集中度:" + secondStatus.get("集中度")
                 + "\n持久度:" + secondStatus.get("持久度") + "\n反射度:" + secondStatus.get("反射度"));
+    }
+
+    public void printState() {
+        System.out.println("生命力:" + vitality + "\n移動力:" + mobility + "\n呪文使用回数:" + spellUsageCount);
     }
 
     public void printCareer() {

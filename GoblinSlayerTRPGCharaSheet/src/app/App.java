@@ -9,6 +9,7 @@ public class App {
         int statusMethod;
         HashMap<String, Integer> firstStatus = new HashMap<String, Integer>();
         HashMap<String, Integer> secondStatus = new HashMap<String, Integer>();
+        ArrayList<Integer> stateValue = new ArrayList<Integer>();
         String[] fume = readCSV("只人出自.csv");
         String[] dwarf = readCSV("鉱人出自.csv");
         String[] elf = readCSV("森人出自.csv");
@@ -106,6 +107,45 @@ public class App {
             }
         }
         stat.printStatus();
+        stat.stateDice();
+        stateValue = stat.getStateValue();
+        System.out.println("状態値の出目:" + stateValue);
+        while (true) {
+            Scanner scan = new Scanner(System.in);
+            try {
+                System.out.println("\n固定値を使いますか？\n2を入力してEnterで使う。使わない場合はその他の数字を入力してEnter。");
+                int statNum = scan.nextInt();
+                if (statNum == 2) {
+                    stateValue.clear();
+                    stat.stateFixed();
+                    stateValue = stat.getStateValue();
+                }
+                while (!(stateValue == null || stateValue.size() == 0)) {
+                    System.out.println("状態値の出目:" + stateValue);
+                    System.out.println("\n生命力に使う出目を入力してください。");
+                    int scaned = scan.nextInt();
+                    int vitalityDice = stateValue.get(stateValue.indexOf(scaned));
+                    stat.decisionVitality(vitalityDice);
+                    stateValue.remove(stateValue.indexOf(scaned));
+                    System.out.println("移動力に使う出目を入力してください。");
+                    scaned = scan.nextInt();
+                    int mobilityDice = stateValue.get(stateValue.indexOf(scaned));
+                    stat.decisionMobility(mobilityDice);
+                    stateValue.remove(stateValue.indexOf(scaned));
+                    System.out.println("呪文使用回数に使う出目を選択してください。");
+                    scaned = scan.nextInt();
+                    int spellUsageDice = stateValue.get(stateValue.indexOf(scaned));
+                    stat.decisionSpellUsageCount(spellUsageDice);
+                    stateValue.remove(stateValue.indexOf(scaned));
+                }
+                break;
+            } catch (Exception e) {
+                System.out.println("入力された値が違います。");
+                e.printStackTrace();
+                continue;
+            }
+        }
+        stat.printState();
     }
 
     public static String[] readCSV(String fileName) {
