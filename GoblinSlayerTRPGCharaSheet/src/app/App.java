@@ -38,6 +38,7 @@ public class App {
                     continue inputRace;
                 }
                 stat.setRace(race);
+                stat.naturalSkill();
                 break;
             } catch (Exception e) {
                 System.out.println("入力された値が違います。");
