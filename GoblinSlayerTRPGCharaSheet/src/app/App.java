@@ -70,7 +70,7 @@ public class App {
                         System.out.println("能力値合計:" + statusSum);
                         if (statusSum <= 15) {
                             System.out.println("能力値合計が15以下なので好きな第一能力値の出目を3に出来ます。");
-                            System.out.println("1:体力点\n2:魂魄点\n3:技量点\n4:知力点\nその他の数字:救済を使用しない");
+                            System.out.println("1:体力点\n2:魂魄点\n3:技量点\n4:知力点\n5:集中度\n6:持久度\n7:反射度\nその他の数字:救済を使用しない");
                             stat.reliefStatus(scan.nextInt());
                             stat.printStatus();
                         }

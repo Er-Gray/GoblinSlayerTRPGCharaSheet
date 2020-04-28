@@ -269,6 +269,57 @@ public class status {
                         break;
                 }
                 break;
+            case 5:
+                switch (race) {
+                    case 1:
+                        secondStatus.replace("集中度", 3);
+                        break;
+                    case 2:
+                        secondStatus.replace("集中度", 4);
+                        break;
+                    case 3:
+                        secondStatus.replace("集中度", 3);
+                        break;
+                    case 4:
+                        secondStatus.replace("集中度", 4);
+                        break;
+                    case 5:
+                        secondStatus.replace("集中度", 2);
+                        break;
+                }
+                break;
+            case 6:
+                switch (race) {
+                    case 1:
+                        secondStatus.replace("持久度", 5);
+                        break;
+                    case 2:
+                        secondStatus.replace("持久度", 4);
+                        break;
+                    case 3:
+                        secondStatus.replace("持久度", 2);
+                        break;
+                    case 4:
+                    case 5:
+                        secondStatus.replace("持久度", 3);
+                        break;
+                }
+            case 7:
+                switch (race) {
+                    case 1:
+                    case 4:
+                        secondStatus.replace("反射度", 3);
+                        break;
+                    case 2:
+                        secondStatus.replace("反射度", 2);
+                        break;
+                    case 3:
+                        secondStatus.replace("反射度", 4);
+                        break;
+                    case 5:
+                        secondStatus.replace("反射度", 5);
+                        break;
+                }
         }
     }
 
