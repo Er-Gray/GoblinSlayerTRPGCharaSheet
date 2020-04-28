@@ -1,6 +1,8 @@
 package app;
 
 import java.util.*;
+import java.awt.*;
+import java.awt.datatransfer.*;
 
 public class status {
     private int race;
@@ -28,6 +30,7 @@ public class status {
     private ArrayList<String> adventurerSkill = new ArrayList<String>();
     private ArrayList<String> generalSkill = new ArrayList<String>();
     private int credit = 100;
+    private String raceStr;
 
     status(int race, HashMap<String, Integer> firstStatus, HashMap<String, Integer> secondStatus, String[] fume,
             String[] dwarf, String[] elf, String[] lizard, String[] layer, String[] history, String[] encounter) {
@@ -65,6 +68,26 @@ public class status {
 
     public void setFirstStatus(HashMap<String, Integer> firstStatus) {
         this.firstStatus = firstStatus;
+    }
+
+    public void decisionRaceStr() {
+        switch (race) {
+            case 1:
+                raceStr = "只人";
+                break;
+            case 2:
+                raceStr = "鉱人";
+                break;
+            case 3:
+                raceStr = "森人";
+                break;
+            case 4:
+                raceStr = "蜥蜴人";
+                break;
+            case 5:
+                raceStr = "圃人";
+                break;
+        }
     }
 
     public void fixedStatus() {
@@ -734,5 +757,76 @@ public class status {
 
     public void printCareer() {
         System.out.println("\n出自:" + origin + "\n来歴:" + historyDeci + "\n邂逅:" + encounterDeci);
+    }
+
+    public void printSheet() {
+        System.out.println("名前：【】　　種族：【 " + raceStr + " 】　　性別：【 】　　年齢：【  】　　PL：【  】\n\n経歴：【 " + origin + " ／ "
+                + historyDeci + " ／ " + encounterDeci
+                + " 】　　等級：【 白磁等級 】\n\n身体的特徴：【  】\n\n経験点：【 3000 ／ 3000 】　　成長点：【 10 ／ 10 】\n\n冒険回数：【 0 】　　冒険達成数：【 0 】\n\n 設定\n\n◆能力値 \n【能力値】                           [第二能力値]\n［第一能力値］   【 集中度："
+                + secondStatus.get("集中度") + " 】    【 持久度：" + secondStatus.get("持久度") + " 】    【 反射度："
+                + secondStatus.get("反射度") + " 】\n 【 体力点：" + firstStatus.get("体力点") + " 】       [ "
+                + (firstStatus.get("体力点") + secondStatus.get("集中度")) + " ]              [ "
+                + (firstStatus.get("体力点") + secondStatus.get("持久度")) + " ]              [ "
+                + (firstStatus.get("体力点") + secondStatus.get("反射度")) + " ]\n 【 魂魄点：" + firstStatus.get("魂魄点")
+                + " 】       [ " + (firstStatus.get("魂魄点") + secondStatus.get("集中度")) + " ]              [ "
+                + (firstStatus.get("魂魄点") + secondStatus.get("持久度")) + " ]              [ "
+                + (firstStatus.get("魂魄点") + secondStatus.get("反射度")) + " ]\n 【 技量点：" + firstStatus.get("技量点")
+                + " 】       [ " + (firstStatus.get("技量点") + secondStatus.get("集中度")) + " ]              [ "
+                + (firstStatus.get("技量点") + secondStatus.get("持久度")) + " ]              [ "
+                + (firstStatus.get("技量点") + secondStatus.get("反射度")) + " ]\n 【 知力点：" + firstStatus.get("知力点")
+                + " 】       [ " + (firstStatus.get("知力点") + secondStatus.get("集中度")) + " ]              [ "
+                + (firstStatus.get("知力点") + secondStatus.get("持久度")) + " ]              [ "
+                + (firstStatus.get("知力点") + secondStatus.get("反射度")) + " ]\n\n　 生命力：【　" + vitality + "　】　 　 生命力２倍：【　"
+                + (vitality * 2) + "　】\n\n　 移動力：【　" + mobility + "　】　　　呪文使用回数：【 " + spellUsageCount
+                + " 】\n\n 呪文抵抗基準値（魂魄反射+冒険者LV+技能補正）：【 " + (firstStatus.get("魂魄点") + secondStatus.get("反射度") + 1)
+                + " 】\n\n◆冒険者レベル：【 1 】\n\n　職業レベル：【 " + initialClass + "：" + initialClassLevel
+                + " 】【 ： 】\n\n◆冒険者技能　　初歩　／　習熟　／　熟達　／　達人　／　伝説　／　効果\n" + adventurerSkill.get(0) + adventurerSkill.get(1)
+                + adventurerSkill.get(2) + adventurerSkill.get(3) + "\n◆一般技能 　 　初歩　／　習熟　／　熟達　／　達人　／　伝説　／　効果\n"
+                + generalSkill.get(0) + generalSkill.get(1) + generalSkill.get(2) + generalSkill.get(3)
+                + "\n◆呪文\n　呪文行使基準値（知力集中or魂魄集中+技能補正）：【  】\n　真言：【  】　　奇跡：【  】　　祖竜：【  】　　精霊：【  】\n\n◎習得呪文：\n《 () 》：\n\n◆攻撃\n　命中基準値（技量集中）：【 "
+                + (firstStatus.get("技量点") + secondStatus.get("集中度"))
+                + " 】\n　近接：【  】　　弩弓：【  】　　投擲：【  】\n\n◎武器：\n【 () 】\n　用途／属性／射程：【  】 命中値合計：【  】 ダメージ：【  】\n　効果：\n\n◎効力値\n　～14：変化無し　15～19：+1D6　20～24：+2D6　25～29：+3D6　30～39：+4D6　40～：+5D6\n\n◆防御\n　回避基準値（技量反射+回避可能な職業LV+技能補正）：【 "
+                + (firstStatus.get("技量点") + secondStatus.get("反射度"))
+                + "回避可能な職業Lv+技能補正 】\n　盾受け基準値（技量反射+盾受け可能な職業LV+技能補正）：【 "
+                + (firstStatus.get("技量点") + secondStatus.get("反射度"))
+                + "盾受け可能な職業LV+技能補正 】\n\n◎鎧：\n【 () 】\n　属性：【  】　　装甲値：【  】　　回避値補正：【  】　　移動力修正：【  】　　隠密性：【  】\n　効果：\n\n◎盾：\n【  】\n　属性：【  】　盾受け修正：【  】　　盾受け値：【  】　　隠密性：【  】\n　効果：\n\n　移動力合計：【  】　　装甲値合計：【  】　　回避値合計：【  】\n　盾受け基準値合計：【  】　　隠密性合計：【  】\n\n◆所持金\n　銀貨："
+                + credit + "枚\n\n◆その他の所持品\n　　冒険者ツール（鈎縄,楔*10,小槌,火口箱,背負い袋,水袋,携帯用食器,白墨,小刀,松明*6）\n　　携帯食(一日セット)*７、衣類");
+    }
+
+    public void copyToClipboard() {
+        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+        StringSelection selection = new StringSelection("名前：【】　　種族：【 " + raceStr
+                + " 】　　性別：【 】　　年齢：【  】　　PL：【  】\n\n経歴：【 " + origin + " ／ " + historyDeci + " ／ " + encounterDeci
+                + " 】　　等級：【 白磁等級 】\n\n身体的特徴：【  】\n\n経験点：【 3000 ／ 3000 】　　成長点：【 10 ／ 10 】\n\n冒険回数：【 0 】　　冒険達成数：【 0 】\n\n 設定\n\n◆能力値 \n【能力値】                           [第二能力値]\n［第一能力値］   【 集中度："
+                + secondStatus.get("集中度") + " 】    【 持久度：" + secondStatus.get("持久度") + " 】    【 反射度："
+                + secondStatus.get("反射度") + " 】\n 【 体力点：" + firstStatus.get("体力点") + " 】       [ "
+                + (firstStatus.get("体力点") + secondStatus.get("集中度")) + " ]              [ "
+                + (firstStatus.get("体力点") + secondStatus.get("持久度")) + " ]              [ "
+                + (firstStatus.get("体力点") + secondStatus.get("反射度")) + " ]\n 【 魂魄点：" + firstStatus.get("魂魄点")
+                + " 】       [ " + (firstStatus.get("魂魄点") + secondStatus.get("集中度")) + " ]              [ "
+                + (firstStatus.get("魂魄点") + secondStatus.get("持久度")) + " ]              [ "
+                + (firstStatus.get("魂魄点") + secondStatus.get("反射度")) + " ]\n 【 技量点：" + firstStatus.get("技量点")
+                + " 】       [ " + (firstStatus.get("技量点") + secondStatus.get("集中度")) + " ]              [ "
+                + (firstStatus.get("技量点") + secondStatus.get("持久度")) + " ]              [ "
+                + (firstStatus.get("技量点") + secondStatus.get("反射度")) + " ]\n 【 知力点：" + firstStatus.get("知力点")
+                + " 】       [ " + (firstStatus.get("知力点") + secondStatus.get("集中度")) + " ]              [ "
+                + (firstStatus.get("知力点") + secondStatus.get("持久度")) + " ]              [ "
+                + (firstStatus.get("知力点") + secondStatus.get("反射度")) + " ]\n\n　 生命力：【　" + vitality + "　】　 　 生命力２倍：【　"
+                + (vitality * 2) + "　】\n\n　 移動力：【　" + mobility + "　】　　　呪文使用回数：【 " + spellUsageCount
+                + " 】\n\n 呪文抵抗基準値（魂魄反射+冒険者LV+技能補正）：【 " + (firstStatus.get("魂魄点") + secondStatus.get("反射度") + 1)
+                + " 】\n\n◆冒険者レベル：【 1 】\n\n　職業レベル：【 " + initialClass + "：" + initialClassLevel
+                + " 】【 ： 】\n\n◆冒険者技能　　初歩　／　習熟　／　熟達　／　達人　／　伝説　／　効果\n" + adventurerSkill.get(0) + adventurerSkill.get(1)
+                + adventurerSkill.get(2) + adventurerSkill.get(3) + "\n◆一般技能 　 　初歩　／　習熟　／　熟達　／　達人　／　伝説　／　効果\n"
+                + generalSkill.get(0) + generalSkill.get(1) + generalSkill.get(2) + generalSkill.get(3)
+                + "\n◆呪文\n　呪文行使基準値（知力集中or魂魄集中+技能補正）：【  】\n　真言：【  】　　奇跡：【  】　　祖竜：【  】　　精霊：【  】\n\n◎習得呪文：\n《 () 》：\n\n◆攻撃\n　命中基準値（技量集中）：【 "
+                + (firstStatus.get("技量点") + secondStatus.get("集中度"))
+                + " 】\n　近接：【  】　　弩弓：【  】　　投擲：【  】\n\n◎武器：\n【 () 】\n　用途／属性／射程：【  】 命中値合計：【  】 ダメージ：【  】\n　効果：\n\n◎効力値\n　～14：変化無し　15～19：+1D6　20～24：+2D6　25～29：+3D6　30～39：+4D6　40～：+5D6\n\n◆防御\n　回避基準値（技量反射+回避可能な職業LV+技能補正）：【 "
+                + (firstStatus.get("技量点") + secondStatus.get("反射度"))
+                + "回避可能な職業Lv+技能補正 】\n　盾受け基準値（技量反射+盾受け可能な職業LV+技能補正）：【 "
+                + (firstStatus.get("技量点") + secondStatus.get("反射度"))
+                + "盾受け可能な職業LV+技能補正 】\n\n◎鎧：\n【 () 】\n　属性：【  】　　装甲値：【  】　　回避値補正：【  】　　移動力修正：【  】　　隠密性：【  】\n　効果：\n\n◎盾：\n【  】\n　属性：【  】　盾受け修正：【  】　　盾受け値：【  】　　隠密性：【  】\n　効果：\n\n　移動力合計：【  】　　装甲値合計：【  】　　回避値合計：【  】\n　盾受け基準値合計：【  】　　隠密性合計：【  】\n\n◆所持金\n　銀貨："
+                + credit + "枚\n\n◆その他の所持品\n　　冒険者ツール（鈎縄,楔*10,小槌,火口箱,背負い袋,水袋,携帯用食器,白墨,小刀,松明*6）\n　　携帯食(一日セット)*７、衣類");
+        clipboard.setContents(selection, selection);
+        System.out.println("キャラクターシートをクリップボードにコピーしました");
     }
 }

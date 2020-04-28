@@ -38,6 +38,7 @@ public class App {
                     continue inputRace;
                 }
                 stat.setRace(race);
+                stat.decisionRaceStr();
                 stat.naturalSkill();
                 break;
             } catch (Exception e) {
@@ -147,6 +148,9 @@ public class App {
             }
         }
         stat.printState();
+        System.out.println("以下がキャラクターシートです\n");
+        stat.printSheet();
+        stat.copyToClipboard();
     }
 
     public static String[] readCSV(String fileName) {
