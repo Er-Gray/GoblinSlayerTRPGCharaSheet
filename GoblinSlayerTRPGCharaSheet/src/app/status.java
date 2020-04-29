@@ -799,7 +799,7 @@ public class status {
     public void printStatus() {
         System.out.println("第一能力値\n体力点:" + firstStatus.get("体力点") + "\n魂魄点:" + firstStatus.get("魂魄点") + "\n技量点:"
                 + firstStatus.get("技量点") + "\n知力点:" + firstStatus.get("知力点") + "\n第二能力値\n集中度:" + secondStatus.get("集中度")
-                + "\n持久度:" + secondStatus.get("持久度") + "\n反射度:" + secondStatus.get("反射度"));
+                + "\n持久度:" + secondStatus.get("持久度") + "\n反射度:" + secondStatus.get("反射度") + "\n");
     }
 
     public void printState() {

@@ -47,6 +47,10 @@ public class App {
                 continue inputRace;
             }
         }
+
+        stat.stateDice();
+        stateValue = stat.getStateValue();
+        System.out.println("状態値の出目:" + stateValue);
         decisionStatus: while (true) {
             System.out.println("\n能力値を決めます\n1:固定値を使う\n2:ランダム");
             Scanner scan = new Scanner(System.in);
@@ -109,10 +113,8 @@ public class App {
             }
         }
         stat.printStatus();
-        stat.stateDice();
-        stateValue = stat.getStateValue();
         System.out.println("状態値の出目:" + stateValue);
-        while (true) {
+        statDecision: while (true) {
             Scanner scan = new Scanner(System.in);
             try {
                 System.out.println("\n固定値を使いますか？\n2を入力してEnterで使う。使わない場合はその他の数字を入力してEnter。");
@@ -123,24 +125,52 @@ public class App {
                     stateValue = stat.getStateValue();
                 }
                 while (!(stateValue == null || stateValue.size() == 0)) {
-                    System.out.println("状態値の出目:" + stateValue);
-                    System.out.println("\n生命力に使う出目を入力してください。");
-                    int scaned = scan.nextInt();
-                    int vitalityDice = stateValue.get(stateValue.indexOf(scaned));
-                    stat.decisionVitality(vitalityDice);
-                    stateValue.remove(stateValue.indexOf(scaned));
-                    System.out.println("移動力に使う出目を入力してください。");
-                    scaned = scan.nextInt();
-                    int mobilityDice = stateValue.get(stateValue.indexOf(scaned));
-                    stat.decisionMobility(mobilityDice);
-                    stateValue.remove(stateValue.indexOf(scaned));
-                    System.out.println("呪文使用回数に使う出目を選択してください。");
-                    scaned = scan.nextInt();
-                    int spellUsageDice = stateValue.get(stateValue.indexOf(scaned));
-                    stat.decisionSpellUsageCount(spellUsageDice);
-                    stateValue.remove(stateValue.indexOf(scaned));
+                    int scaned;
+                    while (true) {
+                        try {
+                            System.out.println("状態値の出目:" + stateValue);
+                            System.out.println("\n生命力に使う出目を入力してください。");
+                            scaned = scan.nextInt();
+                            int vitalityDice = stateValue.get(stateValue.indexOf(scaned));
+                            stat.decisionVitality(vitalityDice);
+                            stateValue.remove(stateValue.indexOf(scaned));
+                            break;
+                        } catch (Exception e) {
+                            System.out.println("入力された値が違います。");
+                            e.printStackTrace();
+                            continue;
+                        }
+                    }
+                    while (true) {
+                        try {
+                            System.out.println("移動力に使う出目を入力してください。");
+                            scaned = scan.nextInt();
+                            int mobilityDice = stateValue.get(stateValue.indexOf(scaned));
+                            stat.decisionMobility(mobilityDice);
+                            stateValue.remove(stateValue.indexOf(scaned));
+                            break;
+                        } catch (Exception e) {
+                            System.out.println("入力された値が違います。");
+                            e.printStackTrace();
+                            continue;
+                        }
+                    }
+                    while (true) {
+                        try {
+                            System.out.println("呪文使用回数に使う出目を選択してください。");
+                            scaned = scan.nextInt();
+                            int spellUsageDice = stateValue.get(stateValue.indexOf(scaned));
+                            stat.decisionSpellUsageCount(spellUsageDice);
+                            stateValue.remove(stateValue.indexOf(scaned));
+                            break;
+                        } catch (Exception e) {
+                            System.out.println("入力された値が違います。");
+                            e.printStackTrace();
+                            continue;
+                        }
+                    }
                 }
-                break;
+                break statDecision;
             } catch (Exception e) {
                 System.out.println("入力された値が違います。");
                 e.printStackTrace();
@@ -151,6 +181,7 @@ public class App {
         System.out.println("以下がキャラクターシートです\n");
         stat.printSheet();
         stat.copyToClipboard();
+        Thread.sleep(30 * 1000);
     }
 
     public static String[] readCSV(String fileName) {
