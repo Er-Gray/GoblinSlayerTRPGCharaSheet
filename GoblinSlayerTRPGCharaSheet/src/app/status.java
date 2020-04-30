@@ -327,28 +327,28 @@ public class status {
         switch (race) {
             case 1:
                 adventurerSkill.set(adventurerSkill.indexOf(""), "【武器：投擲武器】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
-                adventurerSkill.set(adventurerSkill.indexOf(""), "【過重行動】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
-                generalSkill.set(generalSkill.indexOf(""), "【長距離移動】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                adventurerSkill.set(adventurerSkill.indexOf(""), "【   過重行動   】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                generalSkill.set(generalSkill.indexOf(""), "【  長距離移動  】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                 break;
             case 2:
-                adventurerSkill.set(adventurerSkill.indexOf(""), "【治癒適正】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
-                generalSkill.set(generalSkill.indexOf(""), "【暗視】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
-                generalSkill.set(generalSkill.indexOf(""), "【工作】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                adventurerSkill.set(adventurerSkill.indexOf(""), "【   治癒適正   】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                generalSkill.set(generalSkill.indexOf(""), "【     暗視     】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                generalSkill.set(generalSkill.indexOf(""), "【     工作     】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                 break;
             case 3:
-                adventurerSkill.set(adventurerSkill.indexOf(""), "【武器：弩弓】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
-                generalSkill.set(generalSkill.indexOf(""), "【暗視】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
-                generalSkill.set(generalSkill.indexOf(""), "【精霊の愛し子】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                adventurerSkill.set(adventurerSkill.indexOf(""), "【  武器：弩弓  】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                generalSkill.set(generalSkill.indexOf(""), "【     暗視     】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                generalSkill.set(generalSkill.indexOf(""), "【 精霊の愛し子 】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                 break;
             case 4:
-                adventurerSkill.set(adventurerSkill.indexOf(""), "【免疫強化】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
-                generalSkill.set(generalSkill.indexOf(""), "【暗視】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
-                generalSkill.set(generalSkill.indexOf(""), "【竜の末裔】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                adventurerSkill.set(adventurerSkill.indexOf(""), "【   免疫強化   】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                generalSkill.set(generalSkill.indexOf(""), "【     暗視     】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                generalSkill.set(generalSkill.indexOf(""), "【   竜の末裔   】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                 break;
             case 5:
-                adventurerSkill.set(adventurerSkill.indexOf(""), "【隠密】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
-                adventurerSkill.set(adventurerSkill.indexOf(""), "【機先】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
-                generalSkill.set(generalSkill.indexOf(""), "【調理】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                adventurerSkill.set(adventurerSkill.indexOf(""), "【     隠密     】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                adventurerSkill.set(adventurerSkill.indexOf(""), "【     機先     】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                generalSkill.set(generalSkill.indexOf(""), "【     調理     】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                 break;
         }
     }
@@ -370,57 +370,57 @@ public class status {
                         origin = fume[originDice - 2];
                         initialClass = "武道家";
                         initialClassLevel = "1";
-                        generalSkill.set(generalSkill.indexOf(""), "【芸能:】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【    芸能：    】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 4:
                         origin = fume[originDice - 2];
                         initialClass = "野伏";
                         initialClassLevel = "1";
-                        adventurerSkill.set(adventurerSkill.indexOf(""), "【怪物知識】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        adventurerSkill.set(adventurerSkill.indexOf(""), "【   怪物知識   】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 5:
                         origin = fume[originDice - 2];
                         initialClass = "魔術師";
                         initialClassLevel = "1";
-                        generalSkill.set(generalSkill.indexOf(""), "【文献調査】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【   文献調査   】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 6:
                         origin = fume[originDice - 2];
-                        generalSkill.set(generalSkill.indexOf(""), "【職人:】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
-                        adventurerSkill.set(adventurerSkill.indexOf(""), "【手仕事】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【    職人：    】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        adventurerSkill.set(adventurerSkill.indexOf(""), "【    手仕事    】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 7:
                         origin = fume[originDice - 2];
-                        generalSkill.set(generalSkill.indexOf(""), "【生産業:農業】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
-                        adventurerSkill.set(adventurerSkill.indexOf(""), "【頑健】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【 生産業：農業 】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        adventurerSkill.set(adventurerSkill.indexOf(""), "【     頑健     】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         vitality += 5;
                         break;
                     case 8:
                         origin = fume[originDice - 2];
-                        generalSkill.set(generalSkill.indexOf(""), "【交渉:】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【     交渉     】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         credit += (rand.nextInt(6) + 1 + rand.nextInt(6) + 1) * 10;
                         break;
                     case 9:
                         origin = fume[originDice - 2];
                         initialClass = "斥候";
                         initialClassLevel = "1";
-                        adventurerSkill.set(adventurerSkill.indexOf(""), "【第六感】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        adventurerSkill.set(adventurerSkill.indexOf(""), "【    第六感    】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 10:
                         origin = fume[originDice - 2];
                         initialClass = "戦士";
                         initialClassLevel = "1";
-                        generalSkill.set(generalSkill.indexOf(""), "【騎乗】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【     騎乗     】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 11:
                         origin = fume[originDice - 2];
                         initialClass = "神官or竜司祭or精霊使い";
                         initialClassLevel = "1";
-                        generalSkill.set(generalSkill.indexOf(""), "【祈祷or瞑想】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【  祈祷or瞑想  】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 12:
                         origin = fume[originDice - 2];
-                        generalSkill.set(generalSkill.indexOf(""), "【統率】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【     統率     】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         credit += (rand.nextInt(6) + 1 + rand.nextInt(6) + 1) * 50;
                         break;
                 }
@@ -436,56 +436,56 @@ public class status {
                         origin = dwarf[originDice - 2];
                         initialClass = "武道家";
                         initialClassLevel = "1";
-                        generalSkill.set(generalSkill.indexOf(""), "【芸能:】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【    芸能：    】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 4:
                         origin = dwarf[originDice - 2];
                         initialClass = "野伏";
                         initialClassLevel = "1";
-                        adventurerSkill.set(adventurerSkill.indexOf(""), "【怪物知識】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        adventurerSkill.set(adventurerSkill.indexOf(""), "【   怪物知識   】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 5:
                         origin = dwarf[originDice - 2];
-                        generalSkill.set(generalSkill.indexOf(""), "【交渉:】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【     交渉     】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         credit += (rand.nextInt(6) + 1 + rand.nextInt(6) + 1) * 10;
                         break;
                     case 6:
                         origin = dwarf[originDice - 2];
                         initialClass = "戦士or武道家or斥候";
                         initialClassLevel = "1";
-                        generalSkill.set(generalSkill.indexOf(""), "【観察】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【     観察     】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 7:
                         origin = dwarf[originDice - 2];
-                        generalSkill.set(generalSkill.indexOf(""), "【職人:鍛冶】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
-                        adventurerSkill.set(adventurerSkill.indexOf(""), "【手仕事】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【  職人：鍛冶  】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        adventurerSkill.set(adventurerSkill.indexOf(""), "【    手仕事    】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 8:
                         origin = dwarf[originDice - 2];
-                        generalSkill.set(generalSkill.indexOf(""), "【職人:】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
-                        adventurerSkill.set(adventurerSkill.indexOf(""), "【手仕事】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【    職人：    】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        adventurerSkill.set(adventurerSkill.indexOf(""), "【    手仕事    】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 9:
                         origin = dwarf[originDice - 2];
                         initialClass = "斥候";
                         initialClassLevel = "1";
-                        adventurerSkill.set(adventurerSkill.indexOf(""), "【第六感】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        adventurerSkill.set(adventurerSkill.indexOf(""), "【    第六感    】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 10:
                         origin = dwarf[originDice - 2];
                         initialClass = "戦士";
                         initialClassLevel = "1";
-                        adventurerSkill.set(adventurerSkill.indexOf(""), "【強打攻撃・斬】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        adventurerSkill.set(adventurerSkill.indexOf(""), "【 強打攻撃・斬 】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 11:
                         origin = dwarf[originDice - 2];
                         initialClass = "神官or竜司祭";
                         initialClassLevel = "1";
-                        generalSkill.set(generalSkill.indexOf(""), "【祈祷】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【     祈祷     】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 12:
                         origin = dwarf[originDice - 2];
-                        generalSkill.set(generalSkill.indexOf(""), "【統率】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【     統率     】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         credit += (rand.nextInt(6) + 1 + rand.nextInt(6) + 1) * 50;
                         break;
                 }
@@ -501,58 +501,58 @@ public class status {
                         origin = elf[originDice - 2];
                         initialClass = "武道家";
                         initialClassLevel = "1";
-                        generalSkill.set(generalSkill.indexOf(""), "【芸能:】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【    芸能：    】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 4:
                         origin = elf[originDice - 2];
                         initialClass = "野伏or精霊使い";
                         initialClassLevel = "1";
-                        adventurerSkill.set(adventurerSkill.indexOf(""), "【応急手当】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        adventurerSkill.set(adventurerSkill.indexOf(""), "【   応急手当   】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 5:
                         origin = elf[originDice - 2];
-                        generalSkill.set(generalSkill.indexOf(""), "【職人:】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
-                        adventurerSkill.set(adventurerSkill.indexOf(""), "【手仕事】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【    職人：    】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        adventurerSkill.set(adventurerSkill.indexOf(""), "【    手仕事    】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 6:
                         origin = elf[originDice - 2];
                         initialClass = "斥候";
                         initialClassLevel = "1";
-                        adventurerSkill.set(adventurerSkill.indexOf(""), "【第六感】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        adventurerSkill.set(adventurerSkill.indexOf(""), "【    第六感    】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 7:
                         origin = elf[originDice - 2];
                         initialClass = "野伏";
                         initialClassLevel = "1";
-                        adventurerSkill.set(adventurerSkill.indexOf(""), "【怪物知識】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        adventurerSkill.set(adventurerSkill.indexOf(""), "【   怪物知識   】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 8:
                         origin = elf[originDice - 2];
                         initialClass = "魔術師or精霊使い";
                         initialClassLevel = "1";
-                        generalSkill.set(generalSkill.indexOf(""), "【芸能:即興詩】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【 芸能：即興詩 】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 9:
                         origin = elf[originDice - 2];
                         initialClass = "野伏or精霊使い";
                         initialClassLevel = "1";
-                        generalSkill.set(generalSkill.indexOf(""), "【芸能:演奏】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【  芸能：演奏  】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 10:
                         origin = elf[originDice - 2];
                         initialClass = "精霊使い";
                         initialClassLevel = "1";
-                        generalSkill.set(generalSkill.indexOf(""), "【礼儀作法】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【   礼儀作法   】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 11:
                         origin = elf[originDice - 2];
                         initialClass = "神官";
                         initialClassLevel = "1";
-                        generalSkill.set(generalSkill.indexOf(""), "【祈祷】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【     祈祷     】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 12:
                         origin = elf[originDice - 2];
-                        generalSkill.set(generalSkill.indexOf(""), "【統率】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【     統率     】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         credit += (rand.nextInt(6) + 1 + rand.nextInt(6) + 1) * 50;
                         break;
                 }
@@ -568,59 +568,60 @@ public class status {
                         origin = lizard[originDice - 2];
                         initialClass = "武道家";
                         initialClassLevel = "1";
-                        generalSkill.set(generalSkill.indexOf(""), "【芸能:】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【    芸能：    】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 4:
                         origin = lizard[originDice - 2];
                         initialClass = "野伏or斥候";
                         initialClassLevel = "1";
-                        generalSkill.set(generalSkill.indexOf(""), "【職人:】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【    職人：    】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 5:
                         origin = lizard[originDice - 2];
                         initialClass = "戦士";
                         initialClassLevel = "1";
-                        generalSkill.set(generalSkill.indexOf(""), "【騎乗】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【     騎乗     】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 6:
                         origin = lizard[originDice - 2];
                         initialClass = "斥候";
                         initialClassLevel = "1";
-                        generalSkill.set(generalSkill.indexOf(""), "【工作】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【     工作     】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 7:
                         origin = lizard[originDice - 2];
                         initialClass = "野伏";
                         initialClassLevel = "1";
-                        adventurerSkill.set(adventurerSkill.indexOf(""), "【武器:弩弓】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        adventurerSkill.set(adventurerSkill.indexOf(""), "【  武器：弩弓  】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 8:
                         origin = lizard[originDice - 2];
                         initialClass = "戦士";
                         initialClassLevel = "1";
-                        adventurerSkill.set(adventurerSkill.indexOf(""), "【武器:槍】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        adventurerSkill.set(adventurerSkill.indexOf(""), "【   武器：槍   】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 9:
                         origin = lizard[originDice - 2];
                         initialClass = "戦士";
                         initialClassLevel = "1";
-                        adventurerSkill.set(adventurerSkill.indexOf(""), "【盾】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        adventurerSkill.set(adventurerSkill.indexOf(""),
+                                "【      盾      】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 10:
                         origin = lizard[originDice - 2];
                         initialClass = "魔術師or竜司祭";
                         initialClassLevel = "1";
-                        adventurerSkill.set(adventurerSkill.indexOf(""), "【機先】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        adventurerSkill.set(adventurerSkill.indexOf(""), "【     機先     】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 11:
                         origin = lizard[originDice - 2];
                         initialClass = "神官or竜司祭";
                         initialClassLevel = "1";
-                        generalSkill.set(generalSkill.indexOf(""), "【祈祷】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【     祈祷     】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 12:
                         origin = lizard[originDice - 2];
-                        generalSkill.set(generalSkill.indexOf(""), "【統率】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【     統率     】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         credit += (rand.nextInt(6) + 1 + rand.nextInt(6) + 1) * 50;
                         break;
                 }
@@ -636,57 +637,57 @@ public class status {
                         origin = layer[originDice - 2];
                         initialClass = "武道家";
                         initialClassLevel = "1";
-                        generalSkill.set(generalSkill.indexOf(""), "【芸能:】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【    芸能：    】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 4:
                         origin = layer[originDice - 2];
                         initialClass = "魔術師or精霊使い";
                         initialClassLevel = "1";
-                        generalSkill.set(generalSkill.indexOf(""), "【芸能:即興詩】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【 芸能：即興詩 】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 5:
                         origin = layer[originDice - 2];
                         initialClass = "魔術師";
                         initialClassLevel = "1";
-                        generalSkill.set(generalSkill.indexOf(""), "【文献調査】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【   文献調査   】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 6:
                         origin = layer[originDice - 2];
-                        generalSkill.set(generalSkill.indexOf(""), "【職人:】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
-                        adventurerSkill.set(adventurerSkill.indexOf(""), "【手仕事】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【    職人：    】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        adventurerSkill.set(adventurerSkill.indexOf(""), "【    手仕事    】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 7:
                         origin = layer[originDice - 2];
-                        generalSkill.set(generalSkill.indexOf(""), "【生産業:農業】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
-                        adventurerSkill.set(adventurerSkill.indexOf(""), "【頑健】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【 生産業：農業 】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        adventurerSkill.set(adventurerSkill.indexOf(""), "【     頑健     】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         vitality += 5;
                         break;
                     case 8:
                         origin = layer[originDice - 2];
-                        generalSkill.set(generalSkill.indexOf(""), "【交渉:】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【     交渉     】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         credit += (rand.nextInt(6) + 1 + rand.nextInt(6) + 1) * 10;
                         break;
                     case 9:
                         origin = layer[originDice - 2];
                         initialClass = "戦士or武道家or斥候";
                         initialClassLevel = "1";
-                        generalSkill.set(generalSkill.indexOf(""), "【観察】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【     観察     】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 10:
                         origin = layer[originDice - 2];
                         initialClass = "野伏or斥候";
                         initialClassLevel = "1";
-                        generalSkill.set(generalSkill.indexOf(""), "【生産業:農業】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【 生産業：農業 】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 11:
                         origin = layer[originDice - 2];
                         initialClass = "戦士";
                         initialClassLevel = "1";
-                        generalSkill.set(generalSkill.indexOf(""), "【騎乗】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【     騎乗     】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         break;
                     case 12:
                         origin = layer[originDice - 2];
-                        generalSkill.set(generalSkill.indexOf(""), "【統率】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                        generalSkill.set(generalSkill.indexOf(""), "【     統率     】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                         credit += (rand.nextInt(6) + 1 + rand.nextInt(6) + 1) * 50;
                         break;
                 }
@@ -694,37 +695,37 @@ public class status {
         }
         switch (historyDice) {
             case 2:
-                generalSkill.set(generalSkill.indexOf(""), "【労働】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                generalSkill.set(generalSkill.indexOf(""), "【     労働     】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                 break;
             case 3:
-                generalSkill.set(generalSkill.indexOf(""), "【犯罪知識】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                generalSkill.set(generalSkill.indexOf(""), "【   犯罪知識   】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                 break;
             case 4:
-                generalSkill.set(generalSkill.indexOf(""), "【冷静沈着】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                generalSkill.set(generalSkill.indexOf(""), "【   冷静沈着   】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                 break;
             case 5:
-                generalSkill.set(generalSkill.indexOf(""), "【神学】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                generalSkill.set(generalSkill.indexOf(""), "【     神学     】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                 break;
             case 6:
-                adventurerSkill.set(adventurerSkill.indexOf(""), "【忍耐】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                adventurerSkill.set(adventurerSkill.indexOf(""), "【     忍耐     】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                 break;
             case 7:
-                adventurerSkill.set(adventurerSkill.indexOf(""), "【幸運】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                adventurerSkill.set(adventurerSkill.indexOf(""), "【     幸運     】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                 break;
             case 8:
-                generalSkill.set(generalSkill.indexOf(""), "【生存術】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                generalSkill.set(generalSkill.indexOf(""), "【    生存術    】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                 break;
             case 9:
-                generalSkill.set(generalSkill.indexOf(""), "【博識】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                generalSkill.set(generalSkill.indexOf(""), "【     博識     】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                 break;
             case 10:
-                generalSkill.set(generalSkill.indexOf(""), "【先入観なし】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                generalSkill.set(generalSkill.indexOf(""), "【  先入観なし  】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                 break;
             case 11:
-                generalSkill.set(generalSkill.indexOf(""), "【鑑定】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                generalSkill.set(generalSkill.indexOf(""), "【     鑑定     】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                 break;
             case 12:
-                generalSkill.set(generalSkill.indexOf(""), "【礼儀作法】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
+                generalSkill.set(generalSkill.indexOf(""), "【   礼儀作法   】　 ●　　　　○　　　　○　　　　○　　 　 ○　 ／\n");
                 break;
         }
         historyDeci = history[historyDice - 2];
@@ -831,9 +832,10 @@ public class status {
                 + (vitality * 2) + "　】\n\n　 移動力：【　" + mobility + "　】　　　呪文使用回数：【 " + spellUsageCount
                 + " 】\n\n 呪文抵抗基準値（魂魄反射+冒険者LV+技能補正）：【 " + (firstStatus.get("魂魄点") + secondStatus.get("反射度") + 1)
                 + " 】\n\n◆冒険者レベル：【 1 】\n\n　職業レベル：【 " + initialClass + "：" + initialClassLevel
-                + " 】【 ： 】\n\n◆冒険者技能　　初歩　／　習熟　／　熟達　／　達人　／　伝説　／　効果\n" + adventurerSkill.get(0) + adventurerSkill.get(1)
-                + adventurerSkill.get(2) + adventurerSkill.get(3) + "\n◆一般技能 　 　初歩　／　習熟　／　熟達　／　達人　／　伝説　／　効果\n"
-                + generalSkill.get(0) + generalSkill.get(1) + generalSkill.get(2) + generalSkill.get(3)
+                + " 】【 ： 】\n\n◆冒険者技能　　    初歩　／　習熟　／　熟達　／　達人　／　伝説　／　効果\n" + adventurerSkill.get(0)
+                + adventurerSkill.get(1) + adventurerSkill.get(2) + adventurerSkill.get(3)
+                + "\n◆一般技能 　 　    初歩　／　習熟　／　熟達　／　達人　／　伝説　／　効果\n" + generalSkill.get(0) + generalSkill.get(1)
+                + generalSkill.get(2) + generalSkill.get(3)
                 + "\n◆呪文\n　呪文行使基準値（知力集中or魂魄集中+技能補正）：【  】\n　真言：【  】　　奇跡：【  】　　祖竜：【  】　　精霊：【  】\n\n◎習得呪文：\n《 () 》：\n\n◆攻撃\n　命中基準値（技量集中）：【 "
                 + (firstStatus.get("技量点") + secondStatus.get("集中度"))
                 + " 】\n　近接：【  】　　弩弓：【  】　　投擲：【  】\n\n◎武器：\n【 () 】\n　用途／属性／射程：【  】 命中値合計：【  】 ダメージ：【  】\n　効果：\n\n◎効力値\n　～14：変化無し　15～19：+1D6　20～24：+2D6　25～29：+3D6　30～39：+4D6　40～：+5D6\n\n◆防御\n　回避基準値（技量反射+回避可能な職業LV+技能補正）：【 "
@@ -866,9 +868,10 @@ public class status {
                 + (vitality * 2) + "　】\n\n　 移動力：【　" + mobility + "　】　　　呪文使用回数：【 " + spellUsageCount
                 + " 】\n\n 呪文抵抗基準値（魂魄反射+冒険者LV+技能補正）：【 " + (firstStatus.get("魂魄点") + secondStatus.get("反射度") + 1)
                 + " 】\n\n◆冒険者レベル：【 1 】\n\n　職業レベル：【 " + initialClass + "：" + initialClassLevel
-                + " 】【 ： 】\n\n◆冒険者技能　　初歩　／　習熟　／　熟達　／　達人　／　伝説　／　効果\n" + adventurerSkill.get(0) + adventurerSkill.get(1)
-                + adventurerSkill.get(2) + adventurerSkill.get(3) + "\n◆一般技能 　 　初歩　／　習熟　／　熟達　／　達人　／　伝説　／　効果\n"
-                + generalSkill.get(0) + generalSkill.get(1) + generalSkill.get(2) + generalSkill.get(3)
+                + " 】【 ： 】\n\n◆冒険者技能　　    初歩　／　習熟　／　熟達　／　達人　／　伝説　／　効果\n" + adventurerSkill.get(0)
+                + adventurerSkill.get(1) + adventurerSkill.get(2) + adventurerSkill.get(3)
+                + "\n◆一般技能 　 　    初歩　／　習熟　／　熟達　／　達人　／　伝説　／　効果\n" + generalSkill.get(0) + generalSkill.get(1)
+                + generalSkill.get(2) + generalSkill.get(3)
                 + "\n◆呪文\n　呪文行使基準値（知力集中or魂魄集中+技能補正）：【  】\n　真言：【  】　　奇跡：【  】　　祖竜：【  】　　精霊：【  】\n\n◎習得呪文：\n《 () 》：\n\n◆攻撃\n　命中基準値（技量集中）：【 "
                 + (firstStatus.get("技量点") + secondStatus.get("集中度"))
                 + " 】\n　近接：【  】　　弩弓：【  】　　投擲：【  】\n\n◎武器：\n【 () 】\n　用途／属性／射程：【  】 命中値合計：【  】 ダメージ：【  】\n　効果：\n\n◎効力値\n　～14：変化無し　15～19：+1D6　20～24：+2D6　25～29：+3D6　30～39：+4D6　40～：+5D6\n\n◆防御\n　回避基準値（技量反射+回避可能な職業LV+技能補正）：【 "
