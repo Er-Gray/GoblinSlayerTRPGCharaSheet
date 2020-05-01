@@ -182,7 +182,7 @@ public class status {
             case 5:
                 firstStatus.replace("体力点", rand.nextInt(3) + 1 - 1);
                 firstStatus.replace("魂魄点", rand.nextInt(3) + 1 + 2);
-                firstStatus.replace("技量点", rand.nextInt(3) + 1);
+                firstStatus.replace("技量点", rand.nextInt(3) + 1 + 1);
                 firstStatus.replace("知力点", rand.nextInt(3) + 1);
                 secondStatus.replace("集中度", rand.nextInt(3) + 1 - 1);
                 secondStatus.replace("持久度", rand.nextInt(3) + 1);
@@ -246,7 +246,7 @@ public class status {
                         firstStatus.replace("技量点", 3);
                         break;
                     case 5:
-                        firstStatus.replace("技量点", 3);
+                        firstStatus.replace("技量点", 4);
                         break;
                 }
                 break;
@@ -840,9 +840,9 @@ public class status {
                 + (firstStatus.get("技量点") + secondStatus.get("集中度"))
                 + " 】\n　近接：【  】　　弩弓：【  】　　投擲：【  】\n\n◎武器：\n【 () 】\n　用途／属性／射程：【  】 命中値合計：【  】 ダメージ：【  】\n　効果：\n\n◎効力値\n　～14：変化無し　15～19：+1D6　20～24：+2D6　25～29：+3D6　30～39：+4D6　40～：+5D6\n\n◆防御\n　回避基準値（技量反射+回避可能な職業LV+技能補正）：【 "
                 + (firstStatus.get("技量点") + secondStatus.get("反射度"))
-                + "回避可能な職業Lv+技能補正 】\n　盾受け基準値（技量反射+盾受け可能な職業LV+技能補正）：【 "
+                + "+回避可能な職業Lv+技能補正 】\n　盾受け基準値（技量反射+盾受け可能な職業LV+技能補正）：【 "
                 + (firstStatus.get("技量点") + secondStatus.get("反射度"))
-                + "盾受け可能な職業LV+技能補正 】\n\n◎鎧：\n【 () 】\n　属性：【  】　　装甲値：【  】　　回避値補正：【  】　　移動力修正：【  】　　隠密性：【  】\n　効果：\n\n◎盾：\n【  】\n　属性：【  】　盾受け修正：【  】　　盾受け値：【  】　　隠密性：【  】\n　効果：\n\n　移動力合計：【  】　　装甲値合計：【  】　　回避値合計：【  】\n　盾受け基準値合計：【  】　　隠密性合計：【  】\n\n◆所持金\n　銀貨："
+                + "+盾受け可能な職業LV+技能補正 】\n\n◎鎧：\n【 () 】\n　属性：【  】　　装甲値：【  】　　回避値補正：【  】　　移動力修正：【  】　　隠密性：【  】\n　効果：\n\n◎盾：\n【  】\n　属性：【  】　盾受け修正：【  】　　盾受け値：【  】　　隠密性：【  】\n　効果：\n\n　移動力合計：【  】　　装甲値合計：【  】　　回避値合計：【  】\n　盾受け基準値合計：【  】　　隠密性合計：【  】\n\n◆所持金\n　銀貨："
                 + credit + "枚\n\n◆その他の所持品\n　　冒険者ツール（鈎縄,楔*10,小槌,火口箱,背負い袋,水袋,携帯用食器,白墨,小刀,松明*6）\n　　携帯食(一日セット)*７、衣類");
     }
 
@@ -876,9 +876,9 @@ public class status {
                 + (firstStatus.get("技量点") + secondStatus.get("集中度"))
                 + " 】\n　近接：【  】　　弩弓：【  】　　投擲：【  】\n\n◎武器：\n【 () 】\n　用途／属性／射程：【  】 命中値合計：【  】 ダメージ：【  】\n　効果：\n\n◎効力値\n　～14：変化無し　15～19：+1D6　20～24：+2D6　25～29：+3D6　30～39：+4D6　40～：+5D6\n\n◆防御\n　回避基準値（技量反射+回避可能な職業LV+技能補正）：【 "
                 + (firstStatus.get("技量点") + secondStatus.get("反射度"))
-                + "回避可能な職業Lv+技能補正 】\n　盾受け基準値（技量反射+盾受け可能な職業LV+技能補正）：【 "
+                + "+回避可能な職業Lv+技能補正 】\n　盾受け基準値（技量反射+盾受け可能な職業LV+技能補正）：【 "
                 + (firstStatus.get("技量点") + secondStatus.get("反射度"))
-                + "盾受け可能な職業LV+技能補正 】\n\n◎鎧：\n【 () 】\n　属性：【  】　　装甲値：【  】　　回避値補正：【  】　　移動力修正：【  】　　隠密性：【  】\n　効果：\n\n◎盾：\n【  】\n　属性：【  】　盾受け修正：【  】　　盾受け値：【  】　　隠密性：【  】\n　効果：\n\n　移動力合計：【  】　　装甲値合計：【  】　　回避値合計：【  】\n　盾受け基準値合計：【  】　　隠密性合計：【  】\n\n◆所持金\n　銀貨："
+                + "+盾受け可能な職業LV+技能補正 】\n\n◎鎧：\n【 () 】\n　属性：【  】　　装甲値：【  】　　回避値補正：【  】　　移動力修正：【  】　　隠密性：【  】\n　効果：\n\n◎盾：\n【  】\n　属性：【  】　盾受け修正：【  】　　盾受け値：【  】　　隠密性：【  】\n　効果：\n\n　移動力合計：【  】　　装甲値合計：【  】　　回避値合計：【  】\n　盾受け基準値合計：【  】　　隠密性合計：【  】\n\n◆所持金\n　銀貨："
                 + credit + "枚\n\n◆その他の所持品\n　　冒険者ツール（鈎縄,楔*10,小槌,火口箱,背負い袋,水袋,携帯用食器,白墨,小刀,松明*6）\n　　携帯食(一日セット)*７、衣類");
         clipboard.setContents(selection, selection);
         System.out.println("キャラクターシートをクリップボードにコピーしました");

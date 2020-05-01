@@ -78,10 +78,19 @@ public class App {
                             stat.reliefStatus(scan.nextInt());
                             stat.printStatus();
                         }
-                        System.out.println("\nこの能力を使いますか？\n1または2以外の数字:使う\n2:固定値にする");
-                        if (scan.nextInt() == 2) {
-                            stat.fixedStatus();
-                            stat.printStatus();
+
+                        while (true) {
+                            System.out.println("\nこの能力を使いますか？\n1:使う\n2:固定値にする");
+                            int scaned = scan.nextInt();
+                            if (scaned == 2) {
+                                stat.fixedStatus();
+                                stat.printStatus();
+                                break;
+                            } else if (scaned != 1) {
+                                System.out.println("入力された値が違います。\n");
+                                continue;
+                            }
+                            break;
                         }
                         break decisionStatus;
                     default:
@@ -117,12 +126,15 @@ public class App {
         statDecision: while (true) {
             Scanner scan = new Scanner(System.in);
             try {
-                System.out.println("\n固定値を使いますか？\n2を入力してEnterで使う。使わない場合はその他の数字を入力してEnter。");
+                System.out.println("\n固定値を使いますか？\n2を入力してEnterで使う。使わない場合は1を入力してEnter。");
                 int statNum = scan.nextInt();
                 if (statNum == 2) {
                     stateValue.clear();
                     stat.stateFixed();
                     stateValue = stat.getStateValue();
+                } else if (statNum != 1) {
+                    System.out.println("入力された値が違います。");
+                    continue statDecision;
                 }
                 while (!(stateValue == null || stateValue.size() == 0)) {
                     int scaned;
