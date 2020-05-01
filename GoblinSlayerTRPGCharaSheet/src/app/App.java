@@ -150,6 +150,7 @@ public class App {
                         } catch (Exception e) {
                             System.out.println("入力された値が違います。");
                             e.printStackTrace();
+                            scan.next();
                             continue;
                         }
                     }
@@ -164,6 +165,7 @@ public class App {
                         } catch (Exception e) {
                             System.out.println("入力された値が違います。");
                             e.printStackTrace();
+                            scan.next();
                             continue;
                         }
                     }
@@ -178,6 +180,7 @@ public class App {
                         } catch (Exception e) {
                             System.out.println("入力された値が違います。");
                             e.printStackTrace();
+                            scan.next();
                             continue;
                         }
                     }
